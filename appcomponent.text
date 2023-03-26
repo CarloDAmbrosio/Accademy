@@ -1,0 +1,22 @@
+
+
+Le direttive angular
+
+*ngIf non e` altro che una condizione 
+
+Es: 
+
+<p *ngIf="visibile">E` visibile </p> //Se e` vero allora mostra "e` visibile". La variabile "visibile" nell'ngIf e` una variabile che si trova nell'appcomponent.ts
+
+Quindi stiamo dicendo che se la variabile "visibile" e` true allora mostra il messaggio "E` visibile"
+
+Per fare l'else si fa: 
+
+<p *ngIf="visibile ; else blocca">E` visibile</p>
+
+<ng-template #blocca>
+	<p>Non e` visibile</p>
+</ng-template>
+
+Quando facciamo l'else e mettiamo "blocca", angular dice che "Se la variabile "visibile" e` vera allora mostra "E` visibile", altrimenti vai su "blocca" ovvero si va a richiamare l'ng-template che ha come id "blocca" quindi #blocca
+
