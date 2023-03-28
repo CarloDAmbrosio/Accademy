@@ -1,0 +1,34 @@
+ROUTING DINAMICO TRAMITE URL
+
+Per passare un parametro tramite url si fa : 
+
+[routerLink]="['nome_indirizzo', nome_parametro]"
+
+Es.
+
+[routerLink]="['dettagli', name]"
+                   ^
+				   |
+				 E' lo stesso nome (dettagli) che mettiamo nel path
+				 nel app-routing. Es : 
+				 {path:'dettagli/:name', component: DettagliComponent},
+
+Per recuperare il nome nel componente.ts facciamo: 
+
+const name = this.route.snapshot.paramMap.get('name')
+this.nomeServizio.nomeFunzione(name).subscribe	^											
+												|
+											E' lo stesso nome (name) che mettiamo 
+											nel path quando facciamo /:name
+Es: 
+
+const name = this.route.snapshot.paramMap.get('name');
+this.bandiereService.getAll(name).subscribe		
+
+Nel servizio.ts scriviamo quindi la funzione : 
+
+getAll(name:any) {
+return this.http.get("url"+name)
+}									
+											
+											
