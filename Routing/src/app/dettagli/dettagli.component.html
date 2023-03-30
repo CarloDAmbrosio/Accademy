@@ -1,0 +1,26 @@
+
+<!--NavBar-->
+ <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <mat-icon routerLink="">public</mat-icon><h2 class="mt-3">All Countries</h2>
+</nav>
+
+
+<br>
+
+
+<!--Bandiera-->
+ <div class="card shadow-sm p-3 mb-5 bg-white" style="border-radius: 40px;">
+  <div class="row">
+    <div class="col-md-6">
+      <h1><strong>{{dettagli[0].name}}</strong></h1> <br>
+      <h3><strong>Capitale:</strong> {{dettagli[0].capital}}</h3> <br>
+      <h3> <strong>Population:</strong>  {{dettagli[0].population}}</h3>
+    </div>
+    <div class="col-md-6  d-flex justify-content-end">
+      <img src="{{dettagli[0].flags.png}}" alt="Bandiera" class="img-fluid" id="img">
+    </div>
+  </div>
+</div>
