@@ -13,8 +13,8 @@ export class BandiereService {
     return this.http.get(this.url);
   }
 
-  getAll(name:any){
-    return this.http.get("https://restcountries.com/v2/name/"+name);
+  getAll(nome_caso3:any){
+    return this.http.get("https://restcountries.com/v2/name/"+nome_caso3);
   }
 }
 

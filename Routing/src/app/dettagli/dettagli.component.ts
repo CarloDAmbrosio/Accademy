@@ -15,8 +15,8 @@ export class DettagliComponent implements OnInit {
    }
 
   ngOnInit() {
-    const name = this.route.snapshot.paramMap.get('name');
-    this.bandiereService.getAll(name).subscribe(dettagli => {
+    const nome_caso1 = this.route.snapshot.paramMap.get('nome_caso2');
+    this.bandiereService.getAll(nome_caso1).subscribe(dettagli => {
        this.dettagli = dettagli;
    });
   }

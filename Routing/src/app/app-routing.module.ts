@@ -6,7 +6,7 @@ import { SecondaPaginaComponent } from './seconda-pagina/seconda-pagina.componen
 
 const routes: Routes = [
   {path: '', component: BandiereComponent },
-  {path:'dettagli/:name', component: DettagliComponent},
+  {path:'dettagli/:nome_caso2', component: DettagliComponent},
   {path:'secondaPagina', component: SecondaPaginaComponent },
   {path:'', component: BandiereComponent},
 

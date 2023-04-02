@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatButtonModule} from '@angular/material/button';
+import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import {MatIconModule} from '@angular/material/icon';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,9 +26,8 @@ import { DettagliComponent } from './dettagli/dettagli.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
-    MatButtonModule,
     HttpClientModule,
-    MatIconModule
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
