@@ -1,0 +1,9 @@
+<form>
+  <label>
+    Testo da elaborare:
+    <input [(ngModel)]="inputText" [ngModelOptions]="{standalone:true}" /> <br>
+  </label>
+  <button (click)="generateText()">Genera testo</button>
+</form>
+<p>Risposta generata:</p>
+<p>{{ outputText }}</p>
