@@ -1,0 +1,87 @@
+ Starter ->Sono moduli che permettono di aggiungere funzionalita al nostro progetto includendo dipendenze. Per aggiungere uno starter facciamo tasto destro sul progetto -> editStarter --> cerca lo starter
+ Maven -> è un progetto open source che permette di organizzare in maniera efficiente un progetto Java. Maven compila ed esporta oggetti,esegue task automatizzati e gestisce le dipendenze dei progetti
+ Pom.xml è il file dove si trovano tutti gli start che aggiungiamo/eliminiamo
+ 
+ 
+ File SpringBootApplication.java
+ Il tutto parte dal file SpringBootApplication.java (NomeProgettoApplication.java) riconosciuto perche ha classe Main.
+ Questo file contiene una solo istruzione : "SpringApplication.run(NomeProgettoApplication.class, args), questo metodo setta le configurazioni di default.
+ Esegue lo scan di tutte le altre classi per trovare quelle importanti per far partire il contesto di spring, le quali avranno annotation tipo @Controller, @Service, @Repository, @Entity
+ 
+ 
+ application.properties
+ Serve per impostare le voci di configurazioni del nostro progetto, ad esempio debug=true che stampa in console gli errori.
+
+ 
+Architettura MVC 
+M = Model -> sono i dati e i metodi
+V = View -> parte che mostra i dati all'utente finale
+C = Controller -> il tramite tra la view e il model
+
+Il controller va creata con package e finale .controller, al suo interno classi che finiscono con il suffisso Controller
+Per dire a spring che una classe implementa  un controller usiamo @Controller.
+
+
+Per dire che un controller gestisce le richieste con path " / " facciamo : 
+
+	@Controller
+	public class HomeController {
+	
+	@RequestMapping("/") --> indica a spring che quel metodo risponde ad un determinato path passato come parametro, in questo caso  " / "
+	@ResponseBody --> dice che tutto il contenuto restituito da questo metodo fa parte della pagina che verra mostrata all'utente, in questo caso la string "Hello world"
+	public String index() {
+		return "Hello World";
+	}
+	
+	@RequestMapping("/demo")
+	@ResponseBody
+	
+	public String demo() {
+		return "this is a demo"; --> scrivendo sul web localhost:8080/demo uscira a schermo la scritto "this is a demo";
+	}
+	
+}
+
+
+TEMPLATE ENGINE
+Modulo che prende un contenuto testuale, dei dati dinamici, li combina e restituisce il nuovo contenuto elaborato
+
+
+Per mostrare un file html scriviamo : 
+
+Controller
+	public class HomeController {
+	
+	@RequestMapping("/") 
+	
+	public String index() {
+		return "index"; -->nome del file html senza scrivere pero l'estensione e togliamo il @ResponseBody, 
+	}
+	
+}
+
+
+METODO GET
+
+
+@RestController --> invece dell0'annotation @Controller usiamo @RestController
+public class PhotoController {
+
+	@RequestMapping("/api/photos")
+	
+	public Iterable<Photo> list = new ArrayList<Photo>(); --> creiamo la classe Photo che ha come attributi id, String url 
+	
+	list.add(new Photo (1, percorso_photo)); --> quindi quando aggiungiamo una nuova foto di tipo Photo passiamo l'id e il path
+	
+	return list;
+	
+}
+
+Per vedere una foto passando un id tramite path scriviamo : 
+
+	@RequestMapping("/api/photos/{id}");
+
+
+
+
+ 
