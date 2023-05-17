@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center mt-5">
+    <form class="form-inline p-3 my-2 my-lg-0">
+        <label for="">Cerca Ricetta</label>
+        <input class="form-control mr-sm-2" type="search" placeholder="Ricetta" aria-label="Search"
+            [(ngModel)]="searchTerm" [ngModelOptions]="{standalone: true}"> 
+    </form>
+    <form class="form-inline p-3 my-2 my-lg-0">
+        <label for="">Ingredienti Presenti</label>
+        <input class="form-control mr-sm-2" type="search" placeholder="Ingr.presenti" aria-label="Search"
+            [(ngModel)]="searchIngr" [ngModelOptions]="{standalone: true}"> 
+    </form>
+    <form class="form-inline p-3 my-2 my-lg-0">
+        <label for="">Ingredienti Non Presenti</label>
+        <input class="form-control mr-sm-2" type="search" placeholder="IngrNoPresenti" aria-label="Search"
+            [(ngModel)]="searchNoIngr" [ngModelOptions]="{standalone: true}"> 
+    </form>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr class="text-danger">
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Procedimento</th>
+                    <th scope="col">Ingradienti</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let r of ricette | ordina: 'nome' | filtroPipe: searchTerm | ingredienti : searchIngr | ingredientiNonPresenti: searchNoIngr" class="text-black">
+                    <td>{{r.id}}</td>
+                    <td>{{r.nome}}</td>
+                    <td>{{r.procedimento}}</td>
+                    <td>
+                        <span *ngFor="let ingrediente of r.ingredienti; let last = last">
+                          {{ ingrediente.nome }}{{ last ? '' : ',' }}
+                        </span>
+                      </td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+</div>
+

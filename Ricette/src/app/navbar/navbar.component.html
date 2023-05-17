@@ -1,0 +1,37 @@
+<div class="row" style="background-color: rgb(255, 0, 0);">
+    <div class="col-1 mt-4">
+        <span class="text-secondary h6 text-white"> Segui sui social</span>
+    </div>
+    <div class="col-1 p-3">
+       <a class="a"  href="https://www.instagram.com/"><img src="assets/insta.png"  style="width: 25px;" class="m-1"></a> 
+       <a class="a"  href="https://it-it.facebook.com/"><img src="assets/fb.png" mat-raised-button style="width: 25px;" class="m-1"></a> 
+       <a class="a"  href="https://www.whatsapp.com/?lang=it_IT"><img src="assets/ws.png" style="width: 25px;" class="m-1"></a>
+    </div>
+
+       <span class="col-1 mt-4 text-white a h6 text-secondary" style="cursor: pointer;" routerLink="/lista">Ricette</span>
+       <span class="col-1 mt-4 text-white a h6" style="cursor: pointer;"  routerLink="/add">Aggiungi ricette</span>
+    
+    <div class="col-3 mt-3 text-center">
+        <h2 class="h6 text-white" style="font-style: unset; cursor: pointer; margin-left:120px;" routerLink=""> 𝓘 𝓜𝓔𝓝𝓤 𝓓𝓘 𝓖𝓘𝓤𝓢𝓔𝓟𝓟𝓔 𝓔 𝓒𝓐𝓡𝓛𝓞
+             </h2>
+    </div>
+        <button mat-raised-button *ngIf="!isLoggedIn" class="col-1 mt-3" style="margin-left:400px;" routerLink="/login">Accedi</button>
+        <button mat-raised-button *ngIf="!isLoggedIn" class="col-1 ml-5 mt-3" style="margin-left:10px;" routerLink="/reg">Registrati</button>
+
+        <button class="col-1   mt-2" style="margin-left:700px;" *ngIf="isLoggedIn" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon style="color: white;">menu</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" >
+            <button mat-menu-item (click)="logout()">
+              <mat-icon>logout</mat-icon>
+              <span  btn>Logout</span>
+            </button>
+            <button  routerLink="/info" mat-menu-item>
+              <mat-icon>person</mat-icon>
+              <span>Info Personali</span>
+            </button>
+          </mat-menu>
+            
+          
+         
+</div>
