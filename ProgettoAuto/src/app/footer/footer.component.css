@@ -1,0 +1,29 @@
+ .wrapper {
+   min-height: calc(100% - 60px);
+  }
+
+  .footer {
+   background-color: #000000;
+   padding: 10px;
+   text-align: center;
+   color:white;
+   position: fixed;
+    bottom:0px;
+   /*width: 100%; */
+  }
+
+  img{
+    width: 25px;
+    margin: 5px;
+  }
+  .footer-image:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .footer-image {
+    transition: transform 0.3s ease;
+  }
+  .footer-image:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }

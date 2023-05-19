@@ -1,0 +1,30 @@
+<h1 class="text-center mt-3">Reparto Riparazioni</h1>
+<div class="container">
+  <div class="row mt-5 justify-content-center">
+    <div class="col-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Livello Gravita</th>
+          <th scope="col">Spesa</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Auto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let r of riparazioni; let i=index" data-index="#1">
+          <td>{{r[1]}}</td>
+          <td>{{r[2]}}</td>
+          <td>{{r[3]}}</td>
+          <td>{{r[4]}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <div class="row ">
+    <div class="col-12 text-center">
+      <button class="btn btn-dark" routerLink="/addRiparazione">Aggiungi Riparazione</button>
+    </div>
+  </div>
+</div>

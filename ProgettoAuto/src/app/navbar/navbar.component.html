@@ -1,0 +1,28 @@
+<div class="container-fluid " style="background-color: rgb(0, 0, 0);">
+  <div class="row p-1">
+      <div class="col-2">
+          <div class="dropdown mt-2">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon class="text-white">menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item routerLink="catalogo">
+                <img src="assets/car.png" style="width: 30px; margin-right: 4px;">
+                <span>Catalogo</span>
+              </button>
+              <button mat-menu-item routerLink="riparazioni">
+                <img src="assets/riparazione.png" style="width: 32px; margin-right: 4px;">
+                <span>Riparazioni da effettuare</span>
+              </button>
+            </mat-menu>
+          </div>
+      </div>
+      <div class="col-8 text-center">
+          <h1 class="p-1 mt-2 text-white" routerLink="" style="cursor: pointer;">𝓐𝓾𝓭𝓲</h1>
+      </div>
+      <div class="col-2 text-end">
+          <img src="assets/logo3.png" style="height:60px" class="d-inline img-fluid align-middle" alt="logo">
+      </div>
+  </div>
+</div>
+
