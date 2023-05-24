@@ -1,0 +1,12 @@
+BUILDARE UN APP
+
+1. Nel file index.html su <base href=./> mettere il ./
+2. Aprire il terminale e fare ng build  ( se warning andare su angular.json e su MaximumWarning mettere "2gb"
+3.	Andare sulla cartella del progetto aprire il terminale ed eseguire jar cvf nomeProgetto.war . (dovrebbe genere un file.war nella cartella dist)
+4. Avviare Tomcat su xamp e andare sul config, salire di un livello e andare su webapps e trascinare il file.war generato. Stoppare tomcat e riavviarlo
+5. Per vedere se andato bene andare su webapps e deve generare la cartella con lo stesso nome del file war.
+6. Andare su localhost:8080/nomeProgetto
+7. Se si usa un routerLink e da errore quando si utilizza il routerLink e si refresha la pagina, bisogna andare app-routing-modules e fare @NgModule({
+  imports: [RouterModule.forRoot(routes,{useHash:true})],
+  exports: [RouterModule]
+}). Rifare la build da capo
