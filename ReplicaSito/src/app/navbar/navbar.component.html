@@ -1,0 +1,43 @@
+    <div class="container-fluid p-3" [class.bg-dark]="isNavbarDark" style="position: fixed; top: 0; left: 0; right: 0; z-index: 999;">
+        <div class="row">
+            <div class="col-md-4 col-sm-8 col-xs-12 d-flex justify-content-center">
+                <a href="#">
+                    <img src="assets/logo.png" style="width: 350px">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-8 col-xs-12" style="margin-left: 200px;">
+                <nav class="navbar-expand-lg  navbar-light" >
+                    <ul style="display: flex; list-style: none; padding: 0;" class="mt-5">
+                        <li style="margin-right: 25px;" class="text-white" routerLink="home">
+                           <a href="#" style="text-decoration: none; color: rgb(255, 255, 255);">𝗛𝗼𝗺𝗲 </a> 
+                        </li>
+                        <li style="margin-right: 25px;" class="text-white">
+                            <span style="white-space: nowrap;" ><a href="#chisiamo"  style="text-decoration: none; color: rgb(255, 255, 255);" aria-current="page" (click)="scrollToChisiamo()">𝗖𝗵𝗶 𝘀𝗶𝗮𝗺𝗼</a> </span>
+                        </li>
+                        <li style="margin-right: 25px;" class="text-white">
+                           <a href="#tecnologie" style="text-decoration: none; color: rgb(255, 255, 255);" (click)="scrollToTecnologie()">𝗧𝗲𝗰𝗻𝗼𝗹𝗼𝗴𝗶𝗲</a> 
+                        </li>
+                        <li style="margin-right: 25px;" class="text-white nav-link dropdown-toggle" mat-button [matMenuTriggerFor]="menu">
+                            <a style="text-decoration: none; color: rgb(255, 255, 255);">  𝐒𝐞𝐫𝐯𝐢𝐳𝐢 </a>
+                            <mat-menu #menu="matMenu" class="bg-black">
+                                <button mat-menu-item (click)="scrollToBeni()"> <a id="span" href="#beni" style="text-decoration: none;" class="text-white">Arte e Beni Culturali</a> </button>
+                                <button mat-menu-item (click)="scrollToScienza()"> <a id="span" href="#scienza" style="text-decoration: none;" class="text-white">Scienza e Industria </a></button>
+                                <button mat-menu-item (click)="scrollToGiochi()"> <a id="span" href="#giochi" style="text-decoration: none;" class="text-white">Intrattenimento e Giochi </a></button>
+                              </mat-menu>
+                        </li>
+                        <li style="margin-right: 25px;" class="text-white">
+                            <a style="text-decoration: none; color: rgb(255, 255, 255);">  𝗖𝗼𝗻𝘁𝗮𝘁𝘁𝗶 </a>
+                        </li>
+                        <li style="margin-right: 25px;" class="text-white">
+                            <a style="text-decoration: none; color: rgb(255, 255, 255);">  𝐍𝐨𝐯𝐢𝐭à </a>
+                        </li>
+                        <li>
+                            <img src="assets/italia.png" style="width: 25px;">
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    

@@ -1,0 +1,25 @@
+li{
+    font-size: 20px;
+}
+ul{
+    cursor: pointer;
+}
+li:hover{
+    color: rgb(43, 159,198) !important;
+    transition: color 0.3s ease-in-out;
+}
+a:hover{
+    color: rgb(43, 159,198) !important;
+    transition: color 0.3s ease-in-out;
+}
+nav.navbar {
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+  }
+
+  nav.navbar.bg-dark {
+    background-color: black;
+  }
+#span:hover{
+    color: rgb(43, 159,198) !important;
+}
