@@ -1,0 +1,76 @@
+<div class="container-fluid p-4 mt-5" style="background-image: url('assets/sfondoCinese.jpg');" id="beni">
+  <div class="row p-3">
+    <div class="col-5 p-4" (click)="mostraInformazioni()" (mouseleave)="nascondiInformazioni()"
+      style="display: flex; align-items: center; background-color: #4800ff92; border-radius: 25px; cursor: pointer;">
+      <h1 class="text-white" style="font-size: 39px; margin-left:20px; margin-top: 15px;">𝗔𝗿𝘁𝗲 𝗲 𝗕𝗲𝗻𝗶
+        𝗖𝘂𝗹𝘁𝘂𝗿𝗮𝗹𝗶</h1>
+      <img id="museo" src="assets/museo.png" style="width: 100px;margin-left: 240px;">
+    </div>
+    <div class="col-6 p-4" *ngIf="mostraBeni" id="informazioni"
+      style="background-color: rgba(255, 255, 255, 0.43); margin-left: 150px;border-radius: 25px;" [@fadeIn]>
+      Offriamo soluzioni innovative per <b>Musei</b>, <b>Siti Archeologici</b> e <b>Gallerie d'Arte</b> che
+      semplificano e migliorano l'esperienza del visitatore, che potrà quindi godersi l'Arte in modo più semplice ed
+      efficace.
+      <br><br>
+      Le <b>Virtual Reality experiences</b> e <b>Games</b> permettono all'utente di rivivere posti ed eventi del
+      passato, o di godere di un capolavoro (come ad esempio un quadro) dall'interno, coinvolgendo le sue emozioni
+      e i suoi sensi.
+      <br><br>
+      I <b>Totem Interattivi</b> offrono informazioni sugli spazi espositivi e le opere d'arte.
+      <br><br>
+      La <b>Realtà Aumentata</b> e le <b>App Mobile</b> installate su smartphones e altri dispositivi rendono
+      l'esperienza del visitatore più semplice, così che possa trovare informazioni dettagliate circa singole opere
+      d'arte
+      semplicemente inquadrandole.
+      <img src="assets/img1.jpg" class="m-2" style="width: 30%; border-radius: 20px;">
+      <img src="assets/img2.jpg" class="m-2" style="width: 30%; border-radius: 20px;">
+      <img src="assets/img3.jpg" class="m-2" style="width: 30%; border-radius: 20px;">
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-6 p-4" *ngIf="mostraScienza"
+      style="background-color: rgba(255, 255, 255, 0.447); border-radius: 25px;" [@fadeIn]>
+      <span>
+        Scienza e Industria ci permettono di estrarre il massimo dalle nostre tecnologie per proporre modi innovativi
+        per
+        <br> rappresentare efficientemente dati provenienti da modelli <b>Fisici</b>, <b>Biologici</b> e
+        <b>Meccanici</b>.
+        Le soluzioni che offriamo sono efficaci per <i>finalità didattiche</i>, for <b>presentazione di modelli e
+          prodotti</b>, cosi come per <b>training e testing di sistemi complessi</b>( <b>CBT</b> - interactive Computer
+        Based Training).
+        <br> </span>
+      <img src="assets/immagine10.jpg" class="m-2" style="width: 30%; border-radius: 20px;">
+      <img src="assets/immagine11.jpg" class="m-2" style="width: 30%; border-radius: 20px;">
+      <img src="assets/immagine12.jpg" class="m-2" style="width: 30%; border-radius: 20px;">
+    </div>
+    <div class="col"></div>
+    <div class="col-5 p-4" (click)="mostraInfoScienza()" (mouseleave)="nascondiInfoScienza()"
+      style="display: flex; align-items: center; background-color: #ffc80070; border-radius: 25px; cursor: pointer;">
+      <img id="museo" src="assets/science.png" style="width: 100px;">
+      <h1 class="text-white" style="font-size: 39px; margin-left:20px; margin-top: 15px;">𝗦𝗰𝗶𝗲𝗻𝘇𝗮 𝗲
+        𝗶𝗻𝗱𝘂𝘀𝘁𝗿𝗶𝗮</h1>
+    </div>
+  </div>
+
+  <div class="row p-3">
+    <div class="col-5 p-4" (click)="mostraInfoGiochi()" (mouseleave)="nascondiInfoGiochi()"
+      style="display: flex; align-items: center; background-color: #00b7ff8d; border-radius: 25px; cursor: pointer;">
+      <h1 class="text-white" style="font-size: 39px; margin-left:20px; margin-top: 15px;">𝗜𝗻𝘁𝗿𝗮𝘁𝘁𝗲𝗻𝗶𝗺𝗲𝗻𝘁𝗼
+        𝗲 𝗚𝗶𝗼𝗰𝗵𝗶</h1>
+      <img id="museo" src="assets/games.png" style="width: 100px;margin-left: 240px;">
+    </div>
+    <div class="col-6 p-4" *ngIf="mostraGiochi" id="informazioni" style="background-color: rgba(255, 255, 255, 0.447); margin-left: 150px;border-radius: 25px;">
+      <i>Noi amiamo i videogames,</i> e soprattutto, amiamo crearli. <br> Oltre ai videogiochi convenzionali, abbiamo
+      esperienza nella creazione di <b>Serious Games</b> e <b>Learning Games</b>. Questi prodotti permettono di
+      <i>fondere gioco e apprendimento</i>. <br> <b>Serious Games</b> sono principalmente rivolti a professionisti che
+      devono essere formati per particolari incarichi lavoritivi, <br> caratterizzati da circostanze i pericolo,
+      utilizzo di strumenti complessi e altri contesti di training difficili da gestire nel mondo reale.
+      <img src="assets/1.jpg" class="m-2" style="width: 30%; border-radius: 20px;">
+      <img src="assets/2.jpg" class="m-2" style="width: 30%; border-radius: 20px;">
+      <img src="assets/3.jpg" class="m-2" style="width: 30%; border-radius: 20px;">
+    </div>
+  </div>
+
+</div>

@@ -10,6 +10,7 @@ import { SliderComponent } from './slider/slider.component';
 import { InformazioneComponent } from './informazione/informazione.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiziComponent } from './servizi/servizi.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     SliderComponent,
     InformazioneComponent,
+    ServiziComponent,
   ],
   imports: [
     BrowserModule,
