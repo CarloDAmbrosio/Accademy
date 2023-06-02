@@ -3,4 +3,8 @@ border: 2px solid white;
 border-radius: 15px;
 padding: 17px;
 }
-
+#informazioni {
+    backdrop-filter: blur(4px);
+    
+  }
+  
