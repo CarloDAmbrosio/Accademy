@@ -1,0 +1,17 @@
+Concetto di Overload
+L'OVERLOAD dei metodi è una caratteristica della programmazione orientata agli oggetti che consente di definire 
+più metodi con lo stesso nome ma con parametri diversi. Ciò significa che è possibile utilizzare lo stesso nome 
+di metodo per fornire funzionalità simili ma con comportamenti specifici basati sui diversi tipi o numeri di parametri.
+
+
+Concetto di Override
+L'OVERRIDE consente di ereditare un metodo della superclasse nella classe figlio permettendo di modificarne il funzionamento
+
+
+PATTERN PROGRAMMAZIONE ORIENTATA AGLI OGGETTI
+
+FACTORY PATTERN
+Il Factory Pattern è un design pattern della programmazione orientata ad oggetti che fornisce un intefaccia che consente
+di creare oggetti di una classe senza specificare direttamente la classe stessa.
+L'idea principale del Factory Pattern è quella di creare un'interfaccia comune per la creazione di oggetti, in modo che 
+il codice client non sia vincolato alla classe concreta degli oggetti che vengono creati.
