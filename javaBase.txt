@@ -1,0 +1,16 @@
+
+DIFFERENZA TRA INTERFACCIA,CLASSE ASTRATTA E CLASSE
+
+Classe Astratta
+Una classe astratta in JAVA è un tipo di classe che non può essere istanziata direttamente. Può contenere sia metodi concreti che astratti
+
+
+Interfaccia
+Un'interfaccia in JAVA è una collezzione di metodi astratti che rappresentano un contratto. I metodi non sono implementati e le classi
+che implementano quest'interfaccia devono fornire un'implementazione per tutti i metodi dichiarati nell'interfaccia stessa.
+
+Classe
+Una classe in Java è un costrutto fondamentale utilizzato per creare oggetti di quel tipo. Una classe rappresenta un modello che 
+definisce le proprietà (variabili) e i comportamenti (metodi) che gli oggetti istanziati da quella classe possono avere. Le classi in Java
+possono essere istanziate per creare oggetti che possono avere stati diversi ma seguono lo stesso modello definito dalla classe. Possono 
+anche ereditare comportamenti e proprietà da altre classi mediante l'uso di ereditarietà.
