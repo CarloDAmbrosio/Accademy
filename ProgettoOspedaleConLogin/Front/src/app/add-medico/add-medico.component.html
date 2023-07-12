@@ -1,0 +1,54 @@
+<h1 class="text-center mb-5 mt-4">Aggiunta Medico</h1>
+<div class="container">
+  <form (ngSubmit)="submitForm()">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput type="text"  id="nome" [(ngModel)]="medico.nome" name="nome" placeholder="Inserisci il nome" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <mat-form-field>
+        <mat-label>Cognome</mat-label>
+        <input matInput type="text"  id="cognome" [(ngModel)]="medico.cognome" name="cognome" placeholder="Inserisci il cognome" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <mat-form-field>
+        <mat-label>Data di Nascita</mat-label>
+        <input matInput type="date"  id="dataNascita" [(ngModel)]="medico.dataN" name="dataNascita" placeholder="Inserisci la data di nascita" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <mat-form-field>
+        <mat-label>Luogo di Nascita</mat-label>
+        <input matInput type="text"  id="luogoNascita" [(ngModel)]="medico.luogoN" name="luogoNascita" placeholder="Inserisci il luogo di nascita" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">Aggiungi Medico</button>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-12  d-flex justify-content-center">
+    <div class="alert alert-danger mt-5" role="alert" *ngIf="successMessage==false">
+      Errore durante l'aggiunta del Medico
+    </div>
+  </div>
+  </div>
+  </form>
+  <div class="col-12 d-flex justify-content-center">
+  <div *ngIf="successMessage" class="alert alert-success mt-5" >
+   Medico Aggiunto con Successo
+  </div>
+</div>
+</div>

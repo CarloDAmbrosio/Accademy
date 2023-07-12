@@ -1,0 +1,78 @@
+<h1 class="text-center mb-5 mt-4">Aggiunta Medico</h1>
+<div class="container">
+  <form (ngSubmit)="submitForm()">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput type="text"  id="nome" [(ngModel)]="paziente.nome" name="nome" placeholder="Inserisci il nome" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <mat-form-field>
+        <mat-label>Cognome</mat-label>
+        <input matInput type="text"  id="cognome" [(ngModel)]="paziente.cognome" name="cognome" placeholder="Inserisci il cognome" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <mat-form-field>
+        <mat-label>Codice Fiscale</mat-label>
+        <input matInput type="text"  id="cognome" [(ngModel)]="paziente.codFis" name="cognome" placeholder="Inserisci il cf" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <mat-form-field>
+        <mat-label>Data di Nascita</mat-label>
+        <input matInput type="date"  id="dataNascita" [(ngModel)]="paziente.dataN" name="dataNascita" placeholder="Inserisci la data di nascita" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <mat-form-field>
+        <mat-label>Data di Ricovero</mat-label>
+        <input matInput type="date"  id="dataNascita" [(ngModel)]="paziente.dataRicovero" name="dataNascita" placeholder="Inserisci la data di ricovero">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <mat-form-field>
+        <mat-label>Luogo di Nascita</mat-label>
+        <input matInput type="text"  id="luogoNascita" [(ngModel)]="paziente.luogoN" name="luogoNascita" placeholder="Inserisci il luogo di nascita" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <mat-form-field>
+        <mat-label>Sesso</mat-label>
+        <input matInput type="text"  id="luogoNascita" [(ngModel)]="paziente.sesso" name="luogoNascita" placeholder="Inserisci il luogo di nascita" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">Aggiungi Medico</button>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-12  d-flex justify-content-center">
+    <div class="alert alert-danger mt-5" role="alert" *ngIf="successMessage==false">
+      Errore durante l'aggiunta del Paziente
+    </div>
+  </div>
+  </div>
+  </form>
+  <div class="col-12 d-flex justify-content-center">
+  <div *ngIf="successMessage" class="alert alert-success mt-5" >
+   Paziente Aggiunto con Successo
+  </div>
+</div>
+</div>

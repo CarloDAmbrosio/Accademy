@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <h1 class="text-center mt-3">Visite </h1>
+    <div class="col-12 mt-5 d-flex justify-content-center">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Tipo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let v of visite">
+            <th style="font-size: medium;">{{v.id}}</th>
+            <td style="font-size: medium;">{{v.nome}}</td>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

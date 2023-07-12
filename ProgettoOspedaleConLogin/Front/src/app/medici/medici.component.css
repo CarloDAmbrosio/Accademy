@@ -1,0 +1,12 @@
+.image-container {
+  position: relative;
+}
+
+.image {
+  transition: opacity 0.3s ease;
+}
+
+.image:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}

@@ -1,0 +1,63 @@
+<div class="container" *ngIf="mostraTutto">
+  <div class="row">
+    <h1 class="text-center mt-3">Medici </h1>
+    <div class="col-12 mt-5 d-flex justify-content-center">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Cognome</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Data di Nascita</th>
+            <th scope="col">Luogo Nascita</th>
+            <th scope="col">Azioni</th>
+            <th scope="col">Reparto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let m of medici">
+            <th style="font-size: medium;">{{m.cognome}}</th>
+            <td style="font-size: medium;">{{m.nome}}</td>
+            <td style="font-size: medium;">{{m.dataN}}</td>
+            <td style="font-size: medium;">{{m.luogoN}}</td>
+            <td style="font-size: medium;"><img src="assets/delete.png" class="image" (click)="elimina(m.id)" style="width: 25px; margin-left: 10px;"> </td>
+            <td style="font-size: medium;"><img src="assets/reparti.png" class="image" (click)="visualizzaReparto(m.id)" style="width: 30px; margin-left: 10px;"> </td>
+          </tr>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-12 d-flex justify-content-end" routerLink="/addMedico">
+    <button class="btn btn-primary">Aggiungi Medico</button>
+  </div>
+</div>
+
+
+<div class="modal" style="margin-top: 8%;" tabindex="-1" role="dialog" [ngClass]="{'d-block': mostraReparto}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" *ngIf="repartoMedico">
+        <h2 class="modal-title"> Il Dr. {{repartoMedico[0][4]}} {{repartoMedico[0][5]}} lavora nel reparto di  </h2>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-12">
+            <ul class="list-unstyled d-flex justify-content-between">
+              <li *ngFor="let r of repartoMedico; let i=index">
+                <div class="d-flex align-items-center">
+                  <h2>{{r[1]}}</h2>
+                  <img src="{{r[3]}}" style="width: 50px; margin-left: 10px;">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal" (click)="mostraReparto= false; mostraTutto=true">Chiudi</button>
+      </div>
+    </div>
+  </div>
+</div>

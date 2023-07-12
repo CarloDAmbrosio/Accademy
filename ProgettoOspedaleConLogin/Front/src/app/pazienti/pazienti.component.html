@@ -1,0 +1,105 @@
+<div class="container">
+    <!-- <div class="row justify-content-center mb-5">
+      <div class="col-3">
+          <label for=""> <h2>Data Inizio </h2> </label>
+          <input type="date" class="form-control" placeholder="DataInizio" [(ngModel)]="dataInizio" [ngModelOptions]="{standalone: true}">
+      </div>
+        <div class="col-3">
+          <label for=""> <h2>Data Fine </h2> </label>
+          <input type="date" class="form-control" placeholder="DataFine" [(ngModel)]="datafine" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-3">
+          <label for=""> <h2>Visita </h2> </label>
+          <input type="text" class="form-control" placeholder="Visita" [(ngModel)]="visita" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-3 mt-5">
+          <button class="btn btn-primary" (click)="Cerca()">Cerca</button>
+        </div>
+      </div> -->
+
+
+      <div class="row" *ngIf="mostraTutto">
+        <h1 class="text-center mt-3">Dati Paziente </h1>
+        <div class="col-12 mt-3 d-flex justify-content-center">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Codice Fiscale</th>
+                <th scope="col">Data di Nascita</th>
+                <th scope="col">Data Ricovero</th>
+                <th scope="col">Esami</th>
+                <th scope="col">Aggiungi Cartella Clinica</th>
+                <th scope="col">Scarica Cartella Clinica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of paziente">
+                <th style="font-size: medium;">{{p[1]}} {{p[2]}}</th>
+                <td style="font-size: medium;">{{p[3]}}</td>
+                <td style="font-size: medium;">{{p[0]}}</td>
+                <td style="font-size: medium;">{{p[4]}}
+                   <span></span></td>
+                 <td style="font-size: medium;" (click)="esamiPaziente(p[5])">
+                  <button mat-raised-button color="primary"> Mostra </button>
+                </td>
+                <td *ngIf="paziente[0][0]">
+                  <input class="form-control" type="file" id="formFile" (change)="fileSelezionato($event,p[5])">
+                </td>
+                <td *ngIf="paziente[0][0]">
+                  <button mat-raised-button color="primary" style="margin-left: 4px;"
+                    (click)="downloadPdf(p[5])" download="file.pdf">Scarica</button>
+                 </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-12 d-flex justify-content-end" routerLink="/addPaziente">
+        <button class="btn btn-primary">Aggiungi Medico</button>
+      </div>
+
+    <div class="modal" style="margin-top: 8%;" tabindex="-1" role="dialog" [ngClass]="{'d-block': mostraVisite}">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" *ngIf="esamiSostenuti">
+            <h2 class="modal-title"> Il paziente {{esamiSostenuti[0][1]}} {{esamiSostenuti[0][0]}} ha sostenuto : </h2>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12">
+                <ul *ngFor="let e of esamiSostenuti" class="justify-content-start">
+                  <li style="list-style-type: disc;">
+                    Visita: {{e[3]}}
+                  </li>
+                  <li class="mt-3">
+                    Esame : {{e[4]}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal"
+              (click)="mostraVisite= false; mostraTutto=true">Chiudi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="table mt-5" *ngIf="data">
+      <thead>
+        <tr>
+          <th scope="col">Paziente</th>
+          <th scope="col">Data Ricovero</th>
+          <th scope="col">Esito visita</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let f of filtra; let i=index" data-index="#i">
+          <td>{{f[0]}}</td>
+          <td>{{f[1]}}</td>
+          <td>{{f[2]}}</td>
+        </tr>
+      </tbody>
+    </table>

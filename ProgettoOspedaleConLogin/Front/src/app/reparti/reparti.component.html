@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <h1 class="text-center mt-3">Reparti </h1>
+    <div class="col-12 mt-5 d-flex justify-content-center">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Medico</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let r of reparti | async">
+            <td><img src="{{r.foto}}" style="width: 40px;"></td>
+            <td style="font-size: medium;">{{r.nome}}</td>
+            <td style="font-size: medium;" *ngIf="r.idMedico">{{r.idMedico.cognome}} {{r.idMedico.nome}}</td>
+
+
+            <td style="font-size: medium;" *ngIf="!r.idMedico">
+              <mat-form-field style="width: 180px; height: 75px;">
+                <mat-select [(ngModel)]="idMedico">
+                  <mat-option *ngFor="let m of medici" [value]="m.id">{{m.nome}}{{m.cognome}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <button style="margin-left: 10px;" class="btn btn-primary" (click)="associa(r.id)">Aggiungi
+                Medico</button>
+
+            </td>
+
+
+          </tr>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+  <ul>
+    <li *ngFor="let reparto of reparti | async">
+      {{ reparto.nome }}
+    </li>
+  </ul>
+ -->

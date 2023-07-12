@@ -1,0 +1,46 @@
+<div class="container-fluid " style="background-color: rgb(159, 210, 255)">
+  <div class="row p-1">
+      <div class="col-2">
+          <div class="dropdown mt-2">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon class="text-black">menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item routerLink="doctor" routerLink="medici">
+                <img src="assets/doctor.png" style="width: 30px; margin-right: 4px;">
+                <span>Medici</span>
+              </button>
+              <button mat-menu-item routerLink="reparti">
+                <img src="assets/reparti.png" style="width: 32px; margin-right: 4px;">
+                <span>Reparti</span>
+              </button>
+              <button mat-menu-item routerLink="pazienti">
+                <img src="assets/paziente.png" style="width: 32px; margin-right: 4px;">
+                <span>Pazienti</span>
+              </button>
+              <button mat-menu-item routerLink="esami">
+                <img src="assets/esami.png" style="width: 32px; margin-right: 4px;">
+                <span>Esami</span>
+              </button>
+              <button mat-menu-item routerLink="visite">
+                <img src="assets/visite.png" style="width: 32px; margin-right: 4px;">
+                <span>Visite</span>
+              </button>
+            </mat-menu>
+          </div>
+      </div>
+      <div class="col-8 text-center">
+        <img src="assets/ospedale.png" style="width: 50px;">
+      </div>
+
+      <div class="col-1 mt-2">
+        <button mat-raised-button style="margin-left: 80px;" *ngIf="!loggato" routerLink="/login">Accedi</button>
+      </div>
+      <div class="col-1 mt-2">
+        <button mat-raised-button style="margin-left: 30px;" *ngIf="!loggato"  routerLink="/registrati">Registrati</button>
+        <button mat-raised-button (click)="logOut()" *ngIf="loggato">LogOut</button>
+      </div>
+
+  </div>
+</div>
+
