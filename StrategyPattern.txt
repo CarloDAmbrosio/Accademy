@@ -1,0 +1,6 @@
+
+STRATEGY PATTERN
+Il Strategy Pattern in JAVA è un design pattern comportamentale che consente di definire una famiglia di algoritmi,incapsularli all'interno
+di oggetti separati e renderli interscambiabili. Consente quindi di modificare il comportamento di un oggetto durante l'esecuzione del programma
+senza dover modificare il codice dell'oggetto stesso. Questo pattern viene solitamente implementato utilizzando interfacce e classi concretizzate
+che implementano queste interfacce.
